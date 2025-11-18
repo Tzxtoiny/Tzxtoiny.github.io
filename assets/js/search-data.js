@@ -128,11 +128,11 @@ ninja.data = [{
           window.open("mailto:%31%32%31%33%31%30%39%34@%6D%61%69%6C.%73%75%73%74%65%63%68.%65%64%75.%63%6E", "_blank");
         },
       },{
-        id: 'social-rss',
-        title: 'RSS Feed',
+        id: 'social-orcid',
+        title: 'ORCID',
         section: 'Socials',
         handler: () => {
-          window.open("/feed.xml", "_blank");
+          window.open("https://orcid.org/0000-0002-0166-5835# your ORCID ID", "_blank");
         },
       },{
       id: 'light-theme',
