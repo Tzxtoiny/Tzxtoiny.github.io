@@ -501,7 +501,7 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/assets/pdf/CV_ZHIXIN%20TU.pdf", "_blank");
+          window.open("/assets/pdf/CV_ZHIXIN_TU.pdf", "_blank");
         },
       },{
         id: 'social-email',
@@ -509,13 +509,6 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("mailto:%31%32%31%33%31%30%39%34@%6D%61%69%6C.%73%75%73%74%65%63%68.%65%64%75.%63%6E", "_blank");
-        },
-      },{
-        id: 'social-github',
-        title: 'GitHub',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://github.com/Tzxtoiny", "_blank");
         },
       },{
         id: 'social-rss',
