@@ -2,7 +2,8 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.sustech.edu.cn'>Southern University of Science and Technology</a>. Shenzhen, China. Research interests: Artificial Intelligence, Machine Learning.
+subtitle: >-
+  <a href='https://www.sustech.edu.cn'>Southern University of Science and Technology</a>. Shenzhen, China. Research interests: Artificial Intelligence, Machine Learning.
 
 profile:
   align: right
@@ -46,12 +47,13 @@ I am a final-year PhD candidate at Southern University of Science and Technology
   - Advisor: [Prof. Chenglong Fu]
 - **B.S.** in mechanical engineering, Chongqing University (2017 - 2021)
   <!-- - Thesis/Dissertation: [Title] -->
-  - Advisor: [Prof. Chenglong Fu] 
 
 ## About Me
 
-I am passionate about advancing the field of legged locomotion and human augmentation through innovative research and practical applications. My work focuses on developing reinforcement learning algorithms for robotic systems and wearable devices to enhance human capabilities.
+I am passionate about advancing the field of legged locomotion and human augmentation through innovative research and practical applications.
+  My work focuses on developing reinforcement learning algorithms for robotic systems and wearable devices to enhance human capabilities.
 
 ## Contact
 
-Feel free to reach out via email or connect through the social media links below. I'm always open to discussing research collaborations, opportunities, or interesting problems in robotics and human augmentation.
+Feel free to reach out via email or connect through the social media links below.
+  I'm always open to discussing research collaborations, opportunities, or interesting problems in robotics and human augmentation.
