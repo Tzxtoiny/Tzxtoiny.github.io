@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+# subtitle: <a href='#'>Southern </a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: right
@@ -32,7 +32,6 @@ Welcome to my personal homepage!
 I am a final-year PhD candidate at Southern University of Science and Technology (SUSTech), focusing on legged locomotion and human augmentation.
 
 ## Research Interests
-
 - Legged locomotion
 - Reinforcement learning
 - Human-robot interaction
