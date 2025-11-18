@@ -34,7 +34,7 @@ I am a final-year PhD candidate at Southern University of Science and Technology
 ## Research Interests
 
 - Legged locomotion
-- Reinfocement learning
+- Reinforcement learning
 - Human-robot interaction
 - Human augmentation
 - Wearable robots
@@ -44,14 +44,14 @@ I am a final-year PhD candidate at Southern University of Science and Technology
 - **Ph.D.** in intelligent robotics, Southern University of Science and Technology (Expected 2026)
   <!-- - Thesis/Dissertation: [Title] -->
   - Advisor: [Prof. Chenglong Fu]
-- **B.S.** in mechanical enginerring, Chongqing University (2017 - 2021)
+- **B.S.** in mechanical engineering, Chongqing University (2017 - 2021)
   <!-- - Thesis/Dissertation: [Title] -->
   - Advisor: [Prof. Chenglong Fu] 
 
 ## About Me
 
-I am passionate about advancing the field of artificial intelligence through innovative research and practical applications. My work focuses on developing novel machine learning algorithms and applying them to solve real-world problems.
+I am passionate about advancing the field of legged locomotion and human augmentation through innovative research and practical applications. My work focuses on developing reinforcement learning algorithms for robotic systems and wearable devices to enhance human capabilities.
 
 ## Contact
 
-Feel free to reach out via email or connect through the social media links below. I'm always open to discussing research collaborations, opportunities, or interesting problems in AI/ML.
+Feel free to reach out via email or connect through the social media links below. I'm always open to discussing research collaborations, opportunities, or interesting problems in robotics and human augmentation.
