@@ -373,7 +373,8 @@ imagemagick:
     - ".jpeg"
     - ".png"
     - ".tiff"
-    - ".gif"
+    # GIF files are excluded from WebP conversion due to animation frame dimension issues
+    # - ".gif"
   output_formats:
     webp: "-quality 85"
 
