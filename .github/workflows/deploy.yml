@@ -93,8 +93,15 @@ jobs:
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
+          # Increase ImageMagick memory limits for large GIF files
+          sudo sed -i 's/<policy domain="resource" name="memory" value=".*"/<policy domain="resource" name="memory" value="4GiB"/' /etc/ImageMagick-6/policy.xml 2>/dev/null || echo "Policy file not found, using environment variables"
+          sudo sed -i 's/<policy domain="resource" name="map" value=".*"/<policy domain="resource" name="map" value="4GiB"/' /etc/ImageMagick-6/policy.xml 2>/dev/null || true
+          sudo sed -i 's/<policy domain="resource" name="disk" value=".*"/<policy domain="resource" name="disk" value="4GiB"/' /etc/ImageMagick-6/policy.xml 2>/dev/null || true
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
+          export MAGICK_MEMORY_LIMIT=4GiB
+          export MAGICK_MAP_LIMIT=4GiB
+          export MAGICK_DISK_LIMIT=4GiB
           bundle exec jekyll build
       - name: Purge unused CSS 🧹
         run: |
