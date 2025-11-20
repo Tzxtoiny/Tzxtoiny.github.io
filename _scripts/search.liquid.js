@@ -11,7 +11,7 @@ ninja.data = [
   {%- endfor -%}
   {
     id: "nav-{{ about_title | slugify }}",
-    title: "{{ about_title | truncatewords: 13 }}",
+    title: "{{ about_title | capitalize | truncatewords: 13 }}",
     section: "Navigation",
     handler: () => {
       window.location.href = "{{ '/' | relative_url }}";
@@ -42,7 +42,7 @@ ninja.data = [
           {%- assign title = p.title | escape | strip -%}
           {%- if p.permalink contains "/blog/" -%}{%- assign url = "/blog/" -%} {%- else -%}{%- assign url = p.url -%}{%- endif -%}
           id: "nav-{{ title | slugify }}",
-          title: "{{ title | truncatewords: 13 }}",
+          title: "{{ title | capitalize | truncatewords: 13 }}",
           description: "{{ p.description | strip_html | strip_newlines | escape | strip }}",
           section: "Navigation",
           handler: () => {

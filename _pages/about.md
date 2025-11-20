@@ -29,7 +29,7 @@ latest_posts:
 
 Welcome to my personal homepage!
 
-I am a final-year PhD candidate at Southern University of Science and Technology (SUSTech), focusing on legged locomotion and human augmentation.
+I am a final-year PhD candidate at [Southern University of Science and Technology](https://www.sustech.edu.cn/en/) (SUSTech), focusing on legged locomotion and human augmentation.
 
 I am passionate about advancing the field of legged locomotion and human augmentation through innovative research and practical applications.
 My work focuses on developing reinforcement learning algorithms for robotic systems and wearable devices to enhance human capabilities.
@@ -46,9 +46,9 @@ I'm always open to discussing research collaborations, opportunities, or interes
 
 ## Education
 
-- **Ph.D.** in intelligent robotics, Southern University of Science and Technology (Expected 2026)
+- **Ph.D.** in intelligent robotics, [Southern University of Science and Technology](https://www.sustech.edu.cn/en/) (Expected 2026)
   <!-- - Thesis/Dissertation: [Title] -->
-  - Advisor: [Prof. Chenglong Fu]
-- **B.S.** in mechanical engineering, Chongqing University (2017 - 2021)
+  - Advisor: [Prof. Chenglong Fu](https://faculty.sustech.edu.cn/fucl/en/)
+- **B.S.** in mechanical engineering, [Chongqing University](https://english.cqu.edu.cn/) (2017 - 2021)
   <!-- - Thesis/Dissertation: [Title] -->
   <!-- - Advisor: [Prof. Chenglong Fu] -->

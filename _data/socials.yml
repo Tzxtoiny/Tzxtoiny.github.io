@@ -9,10 +9,31 @@
 # arxiv_id: # your arXiv author ID
 # blogger_url: # your blogger URL
 # bluesky_url: # your bluesky URL
-cv_pdf: /assets/pdf/CV_ZHIXIN_TU.pdf # path to your CV PDF file
+# 使用自定义图片图标（推荐）- 使用在线图标，可直接使用
+# cv_pdf:
+#   url: /assets/pdf/CV_ZHIXIN_TU.pdf
+#   logo: https://cdn.simpleicons.org/file-pdf
+email:
+  email: 12131094@mail.sustech.edu.cn
+  logo: https://cdn.simpleicons.org/gmail
+orcid_id:
+  id: 0000-0002-0166-5835
+  logo: https://cdn.simpleicons.org/orcid
+scholar_userid:
+  id: EivJugcAAAAJ
+  logo: https://cdn.simpleicons.org/googlescholar
+
+# 如果想使用本地图标文件，将 logo 改为本地路径，例如：
+# logo: /assets/img/icons/cv.svg
+
+# 如果想使用默认字体图标，使用简单格式：
+# cv_pdf: /assets/pdf/CV_ZHIXIN_TU.pdf
+# email: 12131094@mail.sustech.edu.cn
+# orcid_id: 0000-0002-0166-5835
+# scholar_userid: EivJugcAAAAJ
+
 # dblp_url: # your DBLP profile url
 # discord_id: # your discord id (18-digit unique numerical identifier)
-email: 12131094@mail.sustech.edu.cn # your email address
 # facebook_id: # your facebook id
 # flickr_id: # your flickr id
 # github_username: Tzxtoiny # your GitHub user name
@@ -29,14 +50,27 @@ email: 12131094@mail.sustech.edu.cn # your email address
 # linkedin_username: your-linkedin-username # your LinkedIn user name
 # mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 # medium_username: # your Medium username
-orcid_id: 0000-0002-0166-5835# your ORCID ID
 # osf_id: # your OSF ID
 # pinterest_id: # your pinterest id
 # publons_id: # your ID on Publons
 # quora_username: # your Quora username
 # research_gate_profile: # your profile on ResearchGate
 # rss_icon: true # comment this line to hide the RSS icon
-scholar_userid: EivJugcAAAAJ # your Google Scholar ID
+# scopus_id: # your profile on Scopus
+# semanticscholar_id: # your Semantic Scholar ID
+# spotify_id: # your spotify id
+# stackoverflow_id: # your stackoverflow id
+# strava_userid: # your strava user id
+# telegram_username: # your Telegram user name
+# unsplash_id: # your unsplash id
+# wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
+# whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
+# wikidata_id: # your wikidata id
+# wikipedia_id: # your wikipedia id (Case sensitive)
+# work_url: # work page URL
+# x_username: # your X handle
+# youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
+# zotero_username: # your zotero username
 # scopus_id: # your profile on Scopus
 # semanticscholar_id: # your Semantic Scholar ID
 # spotify_id: # your spotify id
