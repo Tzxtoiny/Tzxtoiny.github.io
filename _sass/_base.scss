@@ -782,11 +782,22 @@ footer.sticky-bottom {
 
     li {
       margin-bottom: 1rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--global-divider-color);
+
+      &:last-child {
+        border-bottom: none;
+      }
 
       .preview {
         width: 100%;
         max-width: 100%;
         height: auto;
+      }
+
+      @media (max-width: 576px) {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
       }
 
       .abbr {
