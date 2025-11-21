@@ -787,7 +787,12 @@ footer.sticky-bottom {
     li {
       margin-bottom: 1rem;
       padding-bottom: 1.5rem;
+      border-top: none; // 确保没有顶线
       border-bottom: 1px solid var(--global-divider-color);
+
+      &:first-child {
+        border-top: none !important; // 第一个条目也没有顶线
+      }
 
       &:last-child {
         border-bottom: none;
