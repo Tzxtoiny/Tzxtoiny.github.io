@@ -769,10 +769,14 @@ footer.sticky-bottom {
 
   h2.bibliography {
     color: var(--global-divider-color);
-    border-top: 1px solid var(--global-divider-color);
-    padding-top: 1rem;
+    border-top: none; // 移除顶线
+    padding-top: 0;
     margin-top: 2rem;
     text-align: right;
+    
+    &:first-of-type {
+      margin-top: 0; // 第一个标题不需要上边距
+    }
   }
 
   ol.bibliography {
