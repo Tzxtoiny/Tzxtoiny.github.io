@@ -29,7 +29,11 @@
         {% if entry.preview contains '://' %}
           <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
         {% else %}
-          {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
+          {% if entry.preview contains '/assets/img/' %}
+            {% assign entry_path = entry.preview %}
+          {% else %}
+            {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
+          {% endif %}
           {%
             include figure.liquid
             loading="eager"
