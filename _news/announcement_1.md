@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2025-11-15
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+Our study on the **Human–Centaur System for Load-Carriage Assistance** has been accepted for publication in the *International Journal of Robotics Research (IJRR)*.
