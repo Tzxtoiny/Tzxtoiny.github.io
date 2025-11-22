@@ -122,7 +122,11 @@ ninja.data = [
         {%- when "cv_pdf" -%}
           {%- assign social_id = "social-cv" -%}
           {%- assign social_title = "CV" -%}
-          {%- capture social_url %}"{{ social[1] | relative_url }}"{% endcapture -%}
+          {%- if social[1].url -%}
+            {%- capture social_url %}"{{ social[1].url | relative_url }}"{% endcapture -%}
+          {%- else -%}
+            {%- capture social_url %}"{{ social[1] | relative_url }}"{% endcapture -%}
+          {%- endif -%}
         {%- when "dblp_url" -%}
           {%- assign social_id = "social-dblp" -%}
           {%- assign social_title = "DBLP" -%}
@@ -134,7 +138,11 @@ ninja.data = [
         {%- when "email" -%}
           {%- assign social_id = "social-email" -%}
           {%- assign social_title = "email" -%}
-          {%- capture social_url %}"mailto:{{ social[1] | encode_email }}"{% endcapture -%}
+          {%- if social[1].email -%}
+            {%- capture social_url %}"mailto:{{ social[1].email | encode_email }}"{% endcapture -%}
+          {%- else -%}
+            {%- capture social_url %}"mailto:{{ social[1] | encode_email }}"{% endcapture -%}
+          {%- endif -%}
         {%- when "facebook_id" -%}
           {%- assign social_id = "social-facebook" -%}
           {%- assign social_title = "Facebook" -%}
@@ -202,7 +210,11 @@ ninja.data = [
         {%- when "orcid_id" -%}
           {%- assign social_id = "social-orcid" -%}
           {%- assign social_title = "ORCID" -%}
-          {%- capture social_url %}"https://orcid.org/{{ social[1] }}"{% endcapture -%}
+          {%- if social[1].id -%}
+            {%- capture social_url %}"https://orcid.org/{{ social[1].id }}"{% endcapture -%}
+          {%- else -%}
+            {%- capture social_url %}"https://orcid.org/{{ social[1] }}"{% endcapture -%}
+          {%- endif -%}
         {%- when "osf_id" -%}
           {%- assign social_id = "social-osf" -%}
           {%- assign social_title = "Open Science Framework" -%}
@@ -230,7 +242,11 @@ ninja.data = [
         {%- when "scholar_userid" -%}
           {%- assign social_id = "social-scholar" -%}
           {%- assign social_title = "Google Scholar" -%}
-          {%- capture social_url %}"https://scholar.google.com/citations?user={{ social[1] }}"{% endcapture -%}
+          {%- if social[1].id -%}
+            {%- capture social_url %}"https://scholar.google.com/citations?user={{ social[1].id }}"{% endcapture -%}
+          {%- else -%}
+            {%- capture social_url %}"https://scholar.google.com/citations?user={{ social[1] }}"{% endcapture -%}
+          {%- endif -%}
         {%- when "scopus_id" -%}
           {%- assign social_id = "social-scopus" -%}
           {%- assign social_title = "Scopus" -%}
