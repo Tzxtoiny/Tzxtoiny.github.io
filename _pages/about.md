@@ -62,10 +62,10 @@ I am open to postdoctoral positions and research roles at universities or resear
 
 <!-- ACADEMIC_SERVICE_START -->
 ## Academic Service
-#### Journal reviewer
-  IJRR, T-RO, TASE, RAL,
-#### Conference reviewer
-  ICRA, IROS, ICDL, ICIRA
+- **Journal reviewer**
+    IJRR, T-RO, TASE, RAL,
+- **Conference reviewer**
+    ICRA, IROS, ICDL, ICIRA
 <!-- ACADEMIC_SERVICE_END -->
 
 <!-- Serve as a reviewer for reputable journals (IJRR, T-RO, T-ASE, RAL, etc.) and flagship robotics research conferences (ICRA, IROS, etc.). -->
