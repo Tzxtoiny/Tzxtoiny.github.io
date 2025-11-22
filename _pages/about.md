@@ -55,9 +55,9 @@ I am open to postdoctoral positions and research roles at universities or resear
 
 <!-- TEACHING_ASSISTANT_START -->
 ## Teaching Assistant
- - ME331: Robot Modling and Control (2021 Fall, with [Prof. Chenglong Fu](https://faculty.sustech.edu.cn/fucl/en/) ) 
- - ME5103: Walking Robots (2022 Spring, with [Prof. Chenglong Fu](https://faculty.sustech.edu.cn/fucl/en/) )
- - ME315: Advanced Mechanisms and Applications (2022 Fall, with [Prof. J.S Dai](https://www.sustech.edu.cn/en/faculties/daijiansheng.html))
+ - **ME331: Robot Modling and Control** (2021 Fall, with [Prof. Chenglong Fu](https://faculty.sustech.edu.cn/fucl/en/) ) 
+ - **ME5103: Walking Robots** (2022 Spring, with [Prof. Chenglong Fu](https://faculty.sustech.edu.cn/fucl/en/) )
+ - **ME315: Advanced Mechanisms and Applications** (2022 Fall, with [Prof. Jian S. Dai](https://www.sustech.edu.cn/en/faculties/daijiansheng.html))
 <!-- TEACHING_ASSISTANT_END -->
 
 <!-- ACADEMIC_SERVICE_START -->
