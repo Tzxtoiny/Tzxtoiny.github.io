@@ -89,28 +89,28 @@ ninja.data = [{
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:{"%65%6D%61%69%6C"=>"%31%32%31%33%31%30%39%34@%6D%61%69%6C.%73%75%73%74%65%63%68.%65%64%75.%63%6E", "%6C%6F%67%6F"=>"%68%74%74%70%73://%63%64%6E.%73%69%6D%70%6C%65%69%63%6F%6E%73.%6F%72%67/%67%6D%61%69%6C"}", "_blank");
+          window.open("mailto:%31%32%31%33%31%30%39%34@%6D%61%69%6C.%73%75%73%74%65%63%68.%65%64%75.%63%6E", "_blank");
         },
       },{
         id: 'social-scholar',
         title: 'Google Scholar',
         section: 'Socials',
         handler: () => {
-          window.open("https://scholar.google.com/citations?user={"id"=>"EivJugcAAAAJ", "logo"=>"https://cdn.simpleicons.org/googlescholar"}", "_blank");
+          window.open("https://scholar.google.com/citations?user=EivJugcAAAAJ", "_blank");
         },
       },{
         id: 'social-orcid',
         title: 'ORCID',
         section: 'Socials',
         handler: () => {
-          window.open("https://orcid.org/{"id"=>"0000-0002-0166-5835", "logo"=>"https://cdn.simpleicons.org/orcid"}", "_blank");
+          window.open("https://orcid.org/0000-0002-0166-5835", "_blank");
         },
       },{
         id: 'social-cv',
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/%7B%22url%22=%3E%22/assets/pdf/CV_ZHIXIN_TU.pdf%22,%20%22logo%22=%3E%22/assets/img/cv.png%22%7D", "_blank");
+          window.open("/assets/pdf/CV_ZHIXIN_TU.pdf", "_blank");
         },
       },{
       id: 'light-theme',
