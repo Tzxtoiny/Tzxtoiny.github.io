@@ -44,27 +44,26 @@ layout: default
     {% endif %}
 
     {% assign full_content = content %}
-    {% comment %} Simple split approach {% endcomment %}
-    {% assign content_array = full_content | split: "## Teaching Assistant" %}
-    {% if content_array.size > 1 %}
-      {% for item in content_array %}
-        {% if forloop.first %}
-          {% assign before_teaching = item %}
-        {% elsif forloop.index == 2 %}
-          {% assign after_ta = item %}
-        {% endif %}
-      {% endfor %}
-      {% assign ta_array = after_ta | split: "## Academic Service" %}
-      {% if ta_array.size > 1 %}
-        {% for item in ta_array %}
-          {% if forloop.first %}
-            {% assign teaching_content = item %}
-          {% elsif forloop.index == 2 %}
-            {% assign service_content = item %}
+    {% comment %} Extract sections using HTML comments {% endcomment %}
+    {% assign parts = full_content | split: "<!-- TEACHING_ASSISTANT_START -->" %}
+    {% if parts.size > 1 %}
+      {% assign before_teaching = parts[0] %}
+      {% assign temp = parts[1] | split: "<!-- TEACHING_ASSISTANT_END -->" %}
+      {% if temp.size > 1 %}
+        {% assign teaching_content = temp[0] %}
+        {% assign rest = temp[1] | split: "<!-- ACADEMIC_SERVICE_START -->" %}
+        {% if rest.size > 1 %}
+          {% assign service_temp = rest[1] | split: "<!-- ACADEMIC_SERVICE_END -->" %}
+          {% if service_temp.size > 1 %}
+            {% assign service_content = service_temp[0] %}
+          {% else %}
+            {% assign service_content = "" %}
           {% endif %}
-        {% endfor %}
+        {% else %}
+          {% assign service_content = "" %}
+        {% endif %}
       {% else %}
-        {% assign teaching_content = after_ta %}
+        {% assign teaching_content = "" %}
         {% assign service_content = "" %}
       {% endif %}
     {% else %}
@@ -101,12 +100,12 @@ layout: default
 
     <!-- Teaching Assistant (extracted from content) -->
     {% if teaching_content != "" %}
-      <div class="clearfix">{% capture ta_display %}## Teaching Assistant{{ teaching_content }}{% endcapture %}{{ ta_display | markdownify }}</div>
+      <div class="clearfix">{{ teaching_content | markdownify }}</div>
     {% endif %}
 
     <!-- Academic Service (extracted from content) -->
     {% if service_content != "" %}
-      <div class="clearfix">{% capture service_display %}## Academic Service{{ service_content }}{% endcapture %}{{ service_display | markdownify }}</div>
+      <div class="clearfix">{{ service_content | markdownify }}</div>
     {% endif %}
 
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}

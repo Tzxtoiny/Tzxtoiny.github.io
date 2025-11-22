@@ -53,15 +53,19 @@ I am open to postdoctoral positions and research roles at universities or resear
 - **B.S.** in mechanical engineering, [Chongqing University](https://english.cqu.edu.cn/) (2017 - 2021)
   - Chinese National Scholarship (2020)
 
+<!-- TEACHING_ASSISTANT_START -->
 ## Teaching Assistant
  - ME331: Robot Modling and Control (2021 Fall, with [Prof. Chenglong Fu](https://faculty.sustech.edu.cn/fucl/en/) ) 
  - ME5103: Walking Robots (2022 Spring, with [Prof. Chenglong Fu](https://faculty.sustech.edu.cn/fucl/en/) )
  - ME315: Advanced Mechanisms and Applications (2022 Fall, with [Prof. J.S Dai](https://www.sustech.edu.cn/en/faculties/daijiansheng.html))
+<!-- TEACHING_ASSISTANT_END -->
 
+<!-- ACADEMIC_SERVICE_START -->
 ## Academic Service
 #### Journal reviewer
   IJRR, T-RO, TASE, RAL,
 #### Conference reviewer
   ICRA, IROS, ICDL, ICIRA
+<!-- ACADEMIC_SERVICE_END -->
 
 <!-- Serve as a reviewer for reputable journals (IJRR, T-RO, T-ASE, RAL, etc.) and flagship robotics research conferences (ICRA, IROS, etc.). -->
