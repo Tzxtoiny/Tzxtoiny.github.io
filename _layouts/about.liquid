@@ -47,16 +47,14 @@ layout: default
     {% if content_parts.size > 1 %}
       {% assign before_teaching = content_parts[0] %}
       {% assign after_teaching_raw = content_parts[1] %}
-      <div class="clearfix">{{ before_teaching }}</div>
+      {% assign teaching_parts = after_teaching_raw | split: "## Academic Service" %}
     {% else %}
       {% assign content_parts = content | split: "## Academic Service" %}
-      <div class="clearfix">{{ content_parts[0] }}</div>
-      {% assign after_teaching_raw = "" %}
+      {% assign before_teaching = content_parts[0] %}
+      {% assign teaching_parts = null %}
     {% endif %}
     
-    {% if after_teaching_raw != "" %}
-      {% assign teaching_parts = after_teaching_raw | split: "## Academic Service" %}
-    {% endif %}
+    <div class="clearfix">{{ before_teaching }}</div>
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
@@ -83,12 +81,12 @@ layout: default
     {% endif %}
 
     <!-- Teaching Assistant (extracted from content) -->
-    {% if teaching_parts.size > 0 %}
+    {% if teaching_parts and teaching_parts.size > 0 %}
       <div class="clearfix">{% capture teaching_content %}## Teaching Assistant{{ teaching_parts[0] }}{% endcapture %}{{ teaching_content | markdownify }}</div>
     {% endif %}
 
     <!-- Academic Service (extracted from content) -->
-    {% if teaching_parts.size > 1 %}
+    {% if teaching_parts and teaching_parts.size > 1 %}
       <div class="clearfix">{% capture academic_service_content %}## Academic Service{{ teaching_parts[1] }}{% endcapture %}{{ academic_service_content | markdownify }}</div>
     {% elsif content_parts.size > 1 %}
       <div class="clearfix">{% capture academic_service_content %}## Academic Service{{ content_parts[1] }}{% endcapture %}{{ academic_service_content | markdownify }}</div>
