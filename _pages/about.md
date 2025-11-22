@@ -59,9 +59,9 @@ I am open to postdoctoral positions and research roles at universities or resear
  - ME315: Advanced Mechanisms and Applications (2022 Fall, with [Prof. J.S Dai](https://www.sustech.edu.cn/en/faculties/daijiansheng.html))
 
 ## Academic Service
-### Journal reviewer
+#### Journal reviewer
   IJRR, T-RO, TASE, RAL,
-### Conference reviewer
+#### Conference reviewer
   ICRA, IROS, ICDL, ICIRA
 
 <!-- Serve as a reviewer for reputable journals (IJRR, T-RO, T-ASE, RAL, etc.) and flagship robotics research conferences (ICRA, IROS, etc.). -->
