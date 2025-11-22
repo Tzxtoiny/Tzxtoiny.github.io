@@ -10,9 +10,7 @@
 # blogger_url: # your blogger URL
 # bluesky_url: # your bluesky URL
 # 使用自定义图片图标（推荐）- 使用在线图标，可直接使用
-# cv_pdf:
-#   url: /assets/pdf/CV_ZHIXIN_TU.pdf
-#   logo: https://cdn.simpleicons.org/file-pdf
+pdf
 email:
   email: 12131094@mail.sustech.edu.cn
   logo: https://cdn.simpleicons.org/gmail
@@ -22,6 +20,9 @@ scholar_userid:
 orcid_id:
   id: 0000-0002-0166-5835
   logo: https://cdn.simpleicons.org/orcid
+cv_pdf:
+  url: /assets/pdf/CV_ZHIXIN_TU.pdf
+  logo: /assets/img/cv.png
 
 
 # 如果想使用本地图标文件，将 logo 改为本地路径，例如：
