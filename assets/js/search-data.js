@@ -106,6 +106,13 @@ ninja.data = [{
           window.open("https://orcid.org/{"id"=>"0000-0002-0166-5835", "logo"=>"https://cdn.simpleicons.org/orcid"}", "_blank");
         },
       },{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/%7B%22url%22=%3E%22/assets/pdf/CV_ZHIXIN_TU.pdf%22,%20%22logo%22=%3E%22/assets/img/cv.png%22%7D", "_blank");
+        },
+      },{
       id: 'light-theme',
       title: 'Change theme to light',
       description: 'Change the theme of the site to Light',
