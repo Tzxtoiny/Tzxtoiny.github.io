@@ -43,7 +43,20 @@ layout: default
       </div>
     {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+    {% assign content_parts = content | split: "## Teaching Assistant" %}
+    {% if content_parts.size > 1 %}
+      {% assign before_teaching = content_parts[0] %}
+      {% assign after_teaching_raw = content_parts[1] %}
+      <div class="clearfix">{{ before_teaching }}</div>
+    {% else %}
+      {% assign content_parts = content | split: "## Academic Service" %}
+      <div class="clearfix">{{ content_parts[0] }}</div>
+      {% assign after_teaching_raw = "" %}
+    {% endif %}
+    
+    {% if after_teaching_raw != "" %}
+      {% assign teaching_parts = after_teaching_raw | split: "## Academic Service" %}
+    {% endif %}
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
@@ -67,6 +80,18 @@ layout: default
         <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Publications</a>
       </h2>
       {% include selected_papers.liquid %}
+    {% endif %}
+
+    <!-- Teaching Assistant (extracted from content) -->
+    {% if teaching_parts.size > 0 %}
+      <div class="clearfix">{% capture teaching_content %}## Teaching Assistant{{ teaching_parts[0] }}{% endcapture %}{{ teaching_content | markdownify }}</div>
+    {% endif %}
+
+    <!-- Academic Service (extracted from content) -->
+    {% if teaching_parts.size > 1 %}
+      <div class="clearfix">{% capture academic_service_content %}## Academic Service{{ teaching_parts[1] }}{% endcapture %}{{ academic_service_content | markdownify }}</div>
+    {% elsif content_parts.size > 1 %}
+      <div class="clearfix">{% capture academic_service_content %}## Academic Service{{ content_parts[1] }}{% endcapture %}{{ academic_service_content | markdownify }}</div>
     {% endif %}
 
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
