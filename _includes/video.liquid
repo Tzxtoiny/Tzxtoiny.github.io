@@ -50,6 +50,11 @@
       {% if include.poster %}
         poster="{{ include.poster }}"
       {% endif %}
+      {% if include.preload %}
+        preload="{{ include.preload }}"
+      {% else %}
+        preload="none"
+      {% endif %}
     />
 
   {% else %}
