@@ -96,8 +96,13 @@
                 {% assign is_chinese_page = true %}
               {% endif %}
               
-              {% comment %} Skip if language doesn't match {% endcomment %}
-              {% if is_chinese_page != is_current_chinese %}
+              {% comment %} Skip if language doesn't match, but allow pages without language field (like CV) {% endcomment %}
+              {% assign has_language = false %}
+              {% if p.language or p.permalink contains '/zh/' or p.permalink == '/zh/' %}
+                {% assign has_language = true %}
+              {% endif %}
+              
+              {% if has_language and is_chinese_page != is_current_chinese %}
                 {% continue %}
               {% endif %}
               
