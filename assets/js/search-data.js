@@ -93,12 +93,12 @@ ninja.data = [{
               window.location.href = "/projects/9_project/";
             },},{id: "research_projects-limited-footholds-locomotion-control-for-quadruped-robots",
           title: 'Limited footholds locomotion control for quadruped robots',
-          description: "Course project",
+          description: "Vision-based quadruped locomotion control over sparse and limited footholds using object detection",
           section: "Research_projects",handler: () => {
               window.location.href = "/research_projects/Quadruped/";
             },},{id: "research_projects-human-centaur-locomotion-control-via-rl-and-human-motion-generation",
           title: 'Human–Centaur locomotion control via RL and human motion generation',
-          description: "Perception-free multi-terrain locomotion policy for Human-Centaur system",
+          description: "Learning-based perception-free multi-terrain locomotion policy for Human-Centaur system",
           section: "Research_projects",handler: () => {
               window.location.href = "/research_projects/centaur_robot/";
             },},{id: "research_projects-example-research-project",
@@ -108,7 +108,7 @@ ninja.data = [{
               window.location.href = "/research_projects/example_project/";
             },},{id: "research_projects-你的研究项目标题",
           title: '你的研究项目标题',
-          description: "简短描述（1-2行，会显示在主页卡片上）",
+          description: "项目描述（会显示在标题下方，斜体）",
           section: "Research_projects",handler: () => {
               window.location.href = "/research_projects/template/";
             },},{
