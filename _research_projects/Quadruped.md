@@ -6,7 +6,7 @@ img: assets/img/publication_preview/quad.gif
 importance: 2
 status: Course project
 # github: https://github.com/username/wheeled-legged-rl
-video: https://player.bilibili.com/player.html?bvid=BV1gt4y1p7vG
+# video: https://player.bilibili.com/player.html?bvid=BV1gt4y1p7vG
 display: true
 # note: Course project
 ---

@@ -517,8 +517,8 @@ ul.task-list input[type="checkbox"] {
         line-height: 1;
 
         &::before {
-          color: var(--global-text-color);
-          transition-property: all 0.2s ease-in-out;
+        color: var(--global-text-color);
+        transition-property: all 0.2s ease-in-out;
         }
       }
 

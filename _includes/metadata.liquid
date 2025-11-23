@@ -18,7 +18,7 @@
 {% if page.language == 'zh' or page.permalink contains '/zh/' %}
   {% capture author_name %}{{ site.last_name_zh }}{{ site.first_name_zh }}{% endcapture %}
 {% else %}
-  {% capture author_name %}{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}{% endcapture %}
+{% capture author_name %}{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}{% endcapture %}
 {% endif %}
 
 <!-- Standard metadata -->

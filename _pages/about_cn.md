@@ -51,7 +51,7 @@ latest_posts:
 ## 助教经历
  - **ME331: 机器人建模与控制** (2021秋季，与[付成龙教授](https://faculty.sustech.edu.cn/fucl/en/)合作) 
  - **ME5103: 行走机器人** (2022春季，与[付成龙教授](https://faculty.sustech.edu.cn/fucl/en/)合作)
- - **ME315: 高级机构学及其应用** (2022秋季，与[戴建生教授](https://www.sustech.edu.cn/en/faculties/daijiansheng.html)合作)
+ - **ME315: 高等机构学及其应用** (2022秋季，与[戴建生教授](https://www.sustech.edu.cn/en/faculties/daijiansheng.html)合作)
 <!-- TEACHING_ASSISTANT_END -->
 
 <!-- ACADEMIC_SERVICE_START -->

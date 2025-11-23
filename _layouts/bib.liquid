@@ -31,8 +31,8 @@
         {% else %}
           {% if entry.preview contains '/assets/img/' %}
             {% assign entry_path = entry.preview %}
-          {% else %}
-            {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
+        {% else %}
+          {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
           {% endif %}
           {%
             include figure.liquid
