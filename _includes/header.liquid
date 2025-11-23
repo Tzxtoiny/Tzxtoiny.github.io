@@ -85,20 +85,23 @@
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
             {% if p.nav and p.autogen == null %}
-              {% comment %} Find Chinese version if current page is Chinese {% endcomment %}
+              {% comment %} Skip pages that don't match current language {% endcomment %}
+              {% assign is_chinese_page = false %}
+              {% if p.language == 'zh' or p.permalink contains '/zh/' %}
+                {% assign is_chinese_page = true %}
+              {% endif %}
+              {% assign is_current_chinese = false %}
+              {% if page.language == 'zh' or page.permalink contains '/zh/' %}
+                {% assign is_current_chinese = true %}
+              {% endif %}
+              
+              {% comment %} Skip if language doesn't match {% endcomment %}
+              {% if is_chinese_page != is_current_chinese %}
+                {% continue %}
+              {% endif %}
+              
               {% assign nav_page = p %}
               {% assign nav_url = p.url %}
-              {% if page.language == 'zh' or page.permalink contains '/zh/' %}
-                {% comment %} Try to find Chinese version of this page {% endcomment %}
-                {% assign base_perm = p.permalink | remove: '/' | split: '/' | last %}
-                {% for cp in site.pages %}
-                  {% if cp.language == 'zh' and cp.nav_order == p.nav_order %}
-                    {% assign nav_page = cp %}
-                    {% assign nav_url = cp.url %}
-                    {% break %}
-                  {% endif %}
-                {% endfor %}
-              {% endif %}
               
               {% if nav_page.dropdown %}
                 {% assign has_active_child = false %}
