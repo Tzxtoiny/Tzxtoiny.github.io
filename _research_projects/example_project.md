@@ -25,7 +25,9 @@ display: false
   
 - **`video`**: 视频链接（可选，会在卡片上显示 Video 按钮）
   - **YouTube**: `https://www.youtube.com/embed/VIDEO_ID` 或 `https://www.youtube.com/embed/VIDEO_ID?start=23`
-  - **Bilibili**: `https://player.bilibili.com/player.html?bvid=BV_ID`
+  - **Bilibili**: `https://player.bilibili.com/player.html?bvid=BV_ID`（注意：必须使用嵌入链接格式，不是普通视频链接）
+    - 从普通链接 `https://www.bilibili.com/video/BV1gt4y1p7vG/` 提取 BV 号（如 `BV1gt4y1p7vG`）
+    - 转换为嵌入链接：`https://player.bilibili.com/player.html?bvid=BV1gt4y1p7vG`
   - **本地视频**: `assets/video/your_video.mp4`（支持 mp4, webm, ogg 格式）
   - 如果设置了 video，点击卡片不会跳转，而是显示视频
   
