@@ -14,7 +14,12 @@
   <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
 {% endif %}
 
-{% capture author_name %}{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}{% endcapture %}
+{% comment %} Get author name based on page language {% endcomment %}
+{% if page.language == 'zh' or page.permalink contains '/zh/' %}
+  {% capture author_name %}{{ site.last_name_zh }}{{ site.first_name_zh }}{% endcapture %}
+{% else %}
+  {% capture author_name %}{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}{% endcapture %}
+{% endif %}
 
 <!-- Standard metadata -->
 <meta charset="utf-8">

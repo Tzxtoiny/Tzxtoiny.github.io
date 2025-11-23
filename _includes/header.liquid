@@ -2,19 +2,37 @@
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
-      {% if page.permalink != '/' %}
-        <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
+      {% if page.permalink != '/' and page.permalink != '/zh/' %}
+        {% if page.language == 'zh' or page.permalink contains '/zh/' %}
+          {% assign home_url = '/zh/' %}
+        {% else %}
+          {% assign home_url = '/' %}
+        {% endif %}
+        <a class="navbar-brand title font-weight-lighter" href="{{ home_url | relative_url }}">
           {% if site.title == 'blank' %}
-            {% if site.first_name %}
-              <span class="font-weight-bold">
-                {{- site.first_name -}}
-              </span>
-            {% endif %}
-            {% if site.middle_name %}
-              {{- site.middle_name -}}
-            {% endif %}
-            {% if site.last_name %}
-              {{- site.last_name -}}
+            {% if page.language == 'zh' or page.permalink contains '/zh/' %}
+              {% comment %} Chinese name {% endcomment %}
+              {% if site.last_name_zh %}
+                <span class="font-weight-bold">
+                  {{- site.last_name_zh -}}
+                </span>
+              {% endif %}
+              {% if site.first_name_zh %}
+                {{- site.first_name_zh -}}
+              {% endif %}
+            {% else %}
+              {% comment %} English name {% endcomment %}
+              {% if site.first_name %}
+                <span class="font-weight-bold">
+                  {{- site.first_name -}}
+                </span>
+              {% endif %}
+              {% if site.middle_name %}
+                {{- site.middle_name -}}
+              {% endif %}
+              {% if site.last_name %}
+                {{- site.last_name -}}
+              {% endif %}
             {% endif %}
           {% else %}
             {{- site.title -}}
@@ -42,15 +60,22 @@
 
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
-          {% for page in site.pages %}
-            {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
-          {% endfor %}
+          {% comment %} Get About page title based on current language {% endcomment %}
+          {% if page.language == 'zh' or page.permalink == '/zh/' %}
+            {% for p in site.pages %}
+              {% if p.permalink == '/zh/' %} {% assign about_title = p.title %} {% assign about_url = '/zh/' %} {% endif %}
+            {% endfor %}
+          {% else %}
+            {% for p in site.pages %}
+              {% if p.permalink == '/' %} {% assign about_title = p.title %} {% assign about_url = '/' %} {% endif %}
+            {% endfor %}
+          {% endif %}
 
           <!-- About -->
-          <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/' | relative_url }}">
+          <li class="nav-item {% if page.permalink == '/' or page.permalink == '/zh/' %}active{% endif %}">
+            <a class="nav-link" href="{{ about_url | relative_url }}">
               {{- about_title }}
-              {% if page.permalink == '/' %}
+              {% if page.permalink == '/' or page.permalink == '/zh/' %}
                 <span class="sr-only">(current)</span>
               {% endif %}
             </a>
@@ -60,14 +85,29 @@
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
             {% if p.nav and p.autogen == null %}
-              {% if p.dropdown %}
+              {% comment %} Find Chinese version if current page is Chinese {% endcomment %}
+              {% assign nav_page = p %}
+              {% assign nav_url = p.url %}
+              {% if page.language == 'zh' or page.permalink contains '/zh/' %}
+                {% comment %} Try to find Chinese version of this page {% endcomment %}
+                {% assign base_perm = p.permalink | remove: '/' | split: '/' | last %}
+                {% for cp in site.pages %}
+                  {% if cp.language == 'zh' and cp.nav_order == p.nav_order %}
+                    {% assign nav_page = cp %}
+                    {% assign nav_url = cp.url %}
+                    {% break %}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+              
+              {% if nav_page.dropdown %}
                 {% assign has_active_child = false %}
-                {% for child in p.children %}
+                {% for child in nav_page.children %}
                   {% if page.title == child.title %}
                     {% assign has_active_child = true %}
                   {% endif %}
                 {% endfor %}
-                <li class="nav-item dropdown {% if page.title == p.title or has_active_child %}active{% endif %}">
+                <li class="nav-item dropdown {% if page.title == nav_page.title or has_active_child %}active{% endif %}">
                   <a
                     class="nav-link dropdown-toggle"
                     href="#"
@@ -77,13 +117,13 @@
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    {{- p.title }}
-                    {% if page.title == p.title or has_active_child %}
+                    {{- nav_page.title }}
+                    {% if page.title == nav_page.title or has_active_child %}
                       <span class="sr-only">(current)</span>
                     {% endif %}
                   </a>
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    {% for child in p.children %}
+                    {% for child in nav_page.children %}
                       {% if child.title == 'divider' %}
                         <div class="dropdown-divider"></div>
                       {% else %}
@@ -98,18 +138,18 @@
                   </div>
                 </li>
               {% else %}
-                {% assign parent_link = p.permalink | remove: 'index.html' %}
-                <li class="nav-item {% if page.url contains parent_link %}active{% endif %}">
-                  {%- if p.permalink contains '://' -%}
-                    {%- assign url = p.permalink -%}
-                  {%- elsif p.permalink contains '/blog/' -%}
+                {% assign parent_link = nav_page.permalink | remove: 'index.html' %}
+                <li class="nav-item {% if page.url contains parent_link or page.url contains nav_page.url %}active{% endif %}">
+                  {%- if nav_page.permalink contains '://' -%}
+                    {%- assign url = nav_page.permalink -%}
+                  {%- elsif nav_page.permalink contains '/blog/' -%}
                     {%- assign url = '/blog/' -%}
                   {%- else -%}
-                    {%- assign url = p.url -%}
+                    {%- assign url = nav_url -%}
                   {%- endif %}
                   <a class="nav-link" href="{{ url | relative_url }}">
-                    {{- p.title }}
-                    {% if page.url contains p.url %}
+                    {{- nav_page.title }}
+                    {% if page.url contains nav_page.url or page.permalink == nav_page.permalink %}
                       <span class="sr-only">(current)</span>
                     {% endif %}
                   </a>

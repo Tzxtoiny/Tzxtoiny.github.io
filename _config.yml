@@ -6,6 +6,9 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Zhixin
 middle_name:
 last_name: Tu
+# Chinese name for Chinese pages
+first_name_zh: 涂志鑫
+last_name_zh: 
 contact_note: >
   Email is the best way to reach me. I typically respond within 24-48 hours.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
@@ -455,7 +458,7 @@ third_party_libraries:
     version: "5.5.0"
   google_fonts:
     url:
-      fonts: "" # Using system fonts instead
+      fonts: "https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" # Noto Sans SC for Chinese characters
   highlightjs:
     integrity:
       css:
