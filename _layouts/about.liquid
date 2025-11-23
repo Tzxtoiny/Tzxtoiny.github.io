@@ -108,6 +108,25 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
+    <!-- Research Projects -->
+    {% assign research_projects_items = site.research_projects | where_exp: "item", "item.display != false" | where_exp: "item", "item.path != '_research_projects/template.md'" | where_exp: "item", "item.path != '_research_projects/example_project.md'" | sort: "importance" %}
+    {% if research_projects_items.size > 0 %}
+      <h2>
+        {% if page.language == 'zh' or page.permalink == '/zh/' %}
+          研究项目
+        {% else %}
+          Research Projects
+        {% endif %}
+      </h2>
+      <div class="projects">
+        <div class="row row-cols-1 row-cols-md-3">
+          {% for project in research_projects_items %}
+            {% include projects.liquid %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
     <!-- Teaching Assistant (extracted from content) -->
     {% if teaching_content != "" %}
       <div class="clearfix">{{ teaching_content | markdownify }}</div>

@@ -796,6 +796,30 @@ footer.sticky-bottom {
     margin-bottom: 1rem;
     text-align: right;
   }
+
+  // Video support in project cards
+  .abstract.hidden {
+    font-size: 0.875rem;
+    max-height: 0px;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.15s ease;
+    border: none;
+    padding: 0 !important;
+    margin: 0;
+
+    video, iframe {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .abstract.hidden.open {
+    max-height: 100em;
+    transition: all 0.15s ease;
+    padding: 1rem !important;
+    border-top: 1px dashed var(--global-divider-color);
+  }
 }
 
 // Publications

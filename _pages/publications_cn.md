@@ -2,7 +2,7 @@
 layout: page
 permalink: /zh/publications/
 title: 学术成果
-description: 按类别倒序排列的出版物。由 jekyll-scholar 生成。
+# description:
 nav: true
 nav_order: 2
 language: zh
