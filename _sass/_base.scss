@@ -880,6 +880,30 @@ footer.sticky-bottom {
         height: auto;
       }
 
+      .research-project-status {
+        background-color: var(--global-divider-color);
+        color: var(--global-text-color);
+        padding: 0.25rem 0.6rem;
+        border-radius: 3px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        border: 1px solid var(--global-divider-color);
+        display: inline-block;
+      }
+
+      // Improve contrast in light mode
+      :root .research-project-status {
+        background-color: rgba(0, 0, 0, 0.08);
+        color: rgba(0, 0, 0, 0.7);
+        border-color: rgba(0, 0, 0, 0.15);
+      }
+
+      html[data-theme="dark"] .research-project-status {
+        background-color: var(--global-divider-color);
+        color: var(--global-text-color);
+        border-color: var(--global-divider-color);
+      }
+
       @media (max-width: 576px) {
         margin-bottom: 2rem;
         padding-bottom: 2rem;
