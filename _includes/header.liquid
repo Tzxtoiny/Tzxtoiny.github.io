@@ -125,6 +125,18 @@
               </button>
             </li>
           {% endif %}
+          <!-- Language Switcher -->
+          <li class="nav-item">
+            {% if page.language == 'zh' or page.permalink == '/zh/' %}
+              <a class="nav-link" href="{{ '/' | relative_url }}" title="English">
+                <span>EN</span>
+              </a>
+            {% else %}
+              <a class="nav-link" href="{{ '/zh/' | relative_url }}" title="中文">
+                <span>中文</span>
+              </a>
+            {% endif %}
+          </li>
           {% if site.enable_darkmode %}
             <!-- Toogle theme mode -->
             <li class="toggle-container">
