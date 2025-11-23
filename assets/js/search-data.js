@@ -98,7 +98,7 @@ ninja.data = [{
               window.location.href = "/research_projects/Quadruped/";
             },},{id: "research_projects-human-centaur-locomotion-control-via-rl-and-human-motion-generation",
           title: 'Human–Centaur locomotion control via RL and human motion generation',
-          description: "Learning-based perception-free multi-terrain locomotion policy for Human-Centaur system",
+          description: "Perception-free multi-terrain locomotion policy for Human-Centaur system via Reinforement learning",
           section: "Research_projects",handler: () => {
               window.location.href = "/research_projects/centaur_robot/";
             },},{id: "research_projects-example-research-project",
