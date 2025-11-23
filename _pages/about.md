@@ -31,7 +31,7 @@ Welcome to my personal homepage!
 
 I am a final-year PhD candidate at [Southern University of Science and Technology](https://www.sustech.edu.cn/en/) (SUSTech) advised by [Prof. Chenglong Fu](https://faculty.sustech.edu.cn/fucl/en/). 
 
-My research lies at the intersection of legged locomotion, wearable robotics, and human augmentation. During my Ph.D., I designed and built a wearable legged robotic system, the Centaur robot, aimed at reducing the metabolic cost of human load-carrying. My research integrates robotic system design, human-robot interaction, and reinforcement learning–based locomotion control. More broadly, I am interested in embodied intelligence and learning-based control for legged robots, including humanoid and quadruped platforms.
+My research lies at the intersection of legged locomotion, wearable robotics, and human augmentation. During my Ph.D., I designed and built a wearable legged robotic system, the Centaur robot, aimed at reducing the metabolic cost of human load-carrying. My research integrates robotic system design, human-robot interaction, and reinforcement learning–based locomotion control. More broadly, I am interested in embodied intelligence and model/learning-based control for legged robots, including humanoid and quadruped platforms.
 
 I am also working part-time as a Reinforcement Learning Algorithm Engineer at Mondo Robotics, where I focus on locomotion algorithm development for wheeled-legged robots, under the mentorship of [Shuo Yang](https://www.linkedin.com/in/shuo-yang-28414660/).
 
