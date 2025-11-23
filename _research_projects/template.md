@@ -1,10 +1,12 @@
 ---
 layout: page
 title: 你的研究项目标题
-description: 简短描述（1-2行，会显示在主页卡片上）
+description: 项目描述（会显示在标题下方，斜体）
+authors: 作者1, 作者2  # 可选：作者/合作者信息
 img: assets/img/publication_preview/your_image.jpg
 importance: 1
-status: in_progress
+status: in_progress  # 可选：项目状态（会显示为徽章）
+note: 备注信息  # 可选：额外备注（如 "Course project"）
 display: false  # 可选：设置为 false 则不显示在主页上
 # redirect: https://external-link.com  # 可选：外部链接
 # github: https://github.com/username/repo  # 可选：GitHub 链接

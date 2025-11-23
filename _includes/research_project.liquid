@@ -1,0 +1,95 @@
+<div class="row">
+  {% if project.img %}
+    <div class="col col-sm-3">
+      <div class="preview-container">
+        {% if project.img contains '://' %}
+          <img class="preview z-depth-1 rounded" src="{{ project.img }}">
+        {% else %}
+          {% if project.img contains '/assets/img/' %}
+            {% assign img_path = project.img %}
+          {% else %}
+            {% assign img_path = project.img | prepend: '/assets/img/publication_preview/' %}
+          {% endif %}
+          {%
+            include figure.liquid
+            loading="eager"
+            path=img_path
+            sizes = "300px"
+            class="preview z-depth-1 rounded"
+            zoomable=true
+            avoid_scaling=true
+            alt=project.img
+          %}
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+  <!-- Project content -->
+  <div id="project-{{ project.title | slugify }}" class="{% if project.img %}col-sm-7{% else %}col-sm-10{% endif %}">
+    <!-- Title -->
+    <div class="title">
+      {% if project.redirect %}
+        <a href="{{ project.redirect }}" style="color: inherit;">{{ project.title }}</a>
+      {% elsif project.video and site.enable_video_embedding %}
+        {{ project.title }}
+      {% else %}
+        <a href="{{ project.url | relative_url }}" style="color: inherit;">{{ project.title }}</a>
+      {% endif %}
+    </div>
+    
+    <!-- Authors/Collaborators -->
+    {% if project.authors %}
+      <div class="author" style="margin-top: 0.5rem;">
+        {{ project.authors }}
+      </div>
+    {% endif %}
+    
+    <!-- Description -->
+    {% if project.description %}
+      <div class="author" style="margin-top: 0.5rem; margin-bottom: 0.5rem; font-style: italic;">
+        {{ project.description }}
+      </div>
+    {% endif %}
+    
+    <!-- Status/Note -->
+    {% if project.status or project.note %}
+      <div class="periodical" style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
+        {% if project.status %}
+          {% assign status_text = project.status | replace: '_', ' ' | capitalize %}
+          <span class="badge" style="background-color: var(--global-theme-color); color: white; padding: 0.25rem 0.5rem; border-radius: 3px; font-size: 0.875rem;">{{ status_text }}</span>
+        {% endif %}
+        {% if project.note %}
+          {% if project.status %} &nbsp; {% endif %}{{ project.note }}
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <!-- Links/Buttons -->
+    <div class="links">
+      {% if project.github %}
+        <a href="{{ project.github }}" class="btn btn-sm z-depth-0" role="button" target="_blank">
+          <i class="fa-brands fa-github"></i> Code
+        </a>
+      {% endif %}
+      {% if project.video and site.enable_video_embedding %}
+        <a class="abstract btn btn-sm z-depth-0" role="button" onclick="event.preventDefault(); event.stopPropagation(); return false;">Video</a>
+      {% elsif project.video %}
+        <a href="{{ project.video }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Video</a>
+      {% endif %}
+      {% if project.redirect %}
+        <a href="{{ project.redirect }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Website</a>
+      {% endif %}
+    </div>
+
+    {% if project.video and site.enable_video_embedding %}
+      <!-- Hidden video block -->
+      <div class="abstract hidden" style="padding: 1rem; text-align: center; display: none;">
+        <div class="video-container" data-video-src="{{ project.video }}" data-poster="{{ project.img }}">
+          <!-- Video will be loaded when this block is opened -->
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+

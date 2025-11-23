@@ -13,15 +13,25 @@ display: false
 ## 字段说明
 
 ### 必需字段：
-- **`title`**: 项目标题（显示在卡片上）
-- **`description`**: 简短描述（显示在卡片上，建议 1-2 行）
+- **`title`**: 项目标题（显示在顶部，粗体）
+- **`description`**: 项目描述（显示在标题下方，斜体）
 - **`importance`**: 排序顺序（数字越小越靠前，例如：1, 2, 3...）
 
 ### 可选字段：
-- **`img`**: 项目预览图片路径（可选）
-  - 相对路径：`assets/img/your_image.jpg`
-  - 绝对路径：`/assets/img/your_image.jpg`
+- **`img`**: 项目预览图片路径（可选，显示在左侧，统一大小 200px 高度）
+  - 相对路径：`assets/img/publication_preview/your_image.jpg`（推荐）
+  - 绝对路径：`/assets/img/publication_preview/your_image.jpg`
   - 外部链接：`https://example.com/image.jpg`
+  - **注意**：图片会自动裁剪为统一大小（200px 高度），建议使用 4:3 或 16:9 比例的图片
+  
+- **`authors`**: 作者/合作者信息（可选，显示在标题下方）
+  - 例如：`Zhixin Tu, Yihao Jiang, Chenglong Fu`
+  
+- **`note`**: 备注信息（可选，显示在描述下方）
+  - 例如：`Course project`、`Under review`、`In collaboration with...`
+  
+- **`status`**: 项目状态（可选，会显示为徽章）
+  - 例如：`in_progress`、`completed`、`submitted`
   
 - **`video`**: 视频链接（可选，会在卡片上显示 Video 按钮）
   - **YouTube**: `https://www.youtube.com/embed/VIDEO_ID` 或 `https://www.youtube.com/embed/VIDEO_ID?start=23`
@@ -66,13 +76,23 @@ img: https://example.com/image.jpg
 layout: page
 title: 基于强化学习的四足机器人运动控制
 description: 研究使用深度强化学习算法实现四足机器人的动态步态控制和地形适应能力。
+authors: 涂志鑫, 杨硕
 img: assets/img/publication_preview/quadruped_robot.jpg
 importance: 1
 status: in_progress
+note: Course project
 video: https://www.youtube.com/embed/VIDEO_ID
 github: https://github.com/username/quadruped-rl
 ---
 ```
+
+### 字段显示顺序：
+
+1. **标题** (`title`) - 粗体，最顶部
+2. **作者** (`authors`) - 如果有，显示在标题下方
+3. **描述** (`description`) - 斜体，显示在作者或标题下方
+4. **状态/备注** (`status`/`note`) - 显示为徽章或文本
+5. **按钮** (Video, Code, Website) - 显示在最下方
 
 ### 带视频的示例
 

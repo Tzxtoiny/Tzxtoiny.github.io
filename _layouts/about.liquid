@@ -118,12 +118,14 @@ layout: default
           Research Projects
         {% endif %}
       </h2>
-      <div class="projects">
-        <div class="row row-cols-1 row-cols-md-3">
+      <div class="publications">
+        <ol class="bibliography">
           {% for project in research_projects_items %}
-            {% include projects.liquid %}
+            <li>
+              {% include research_project.liquid %}
+            </li>
           {% endfor %}
-        </div>
+        </ol>
       </div>
     {% endif %}
 
