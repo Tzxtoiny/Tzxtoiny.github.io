@@ -1,7 +1,29 @@
 $(document).ready(function () {
   // add toggle functionality to abstract, award and bibtex buttons
   $("a.abstract").click(function () {
-    $(this).parent().parent().find(".abstract.hidden").toggleClass("open");
+    var hiddenBlock = $(this).parent().parent().find(".abstract.hidden");
+    hiddenBlock.toggleClass("open");
+    
+    // Lazy load video iframe when opening
+    if (hiddenBlock.hasClass("open")) {
+      var videoContainer = hiddenBlock.find(".video-container");
+      if (videoContainer.length && !videoContainer.data("loaded")) {
+        var videoSrc = videoContainer.data("video-src");
+        var poster = videoContainer.data("poster");
+        if (videoSrc) {
+          var extension = videoSrc.split('.').pop().toLowerCase();
+          if (extension === 'mp4' || extension === 'webm' || extension === 'ogg') {
+            // Local video
+            videoContainer.html('<video class="img-fluid rounded z-depth-1" controls preload="none" poster="' + poster + '" style="width: 100%; max-width: 100%;"><source src="' + videoSrc + '"></video>');
+          } else {
+            // External video (YouTube, Bilibili, etc.)
+            videoContainer.html('<iframe src="' + videoSrc + '" class="img-fluid rounded z-depth-1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen sandbox="allow-same-origin allow-scripts allow-popups allow-presentation" style="width: 100%; max-width: 100%; height: auto; min-height: 400px;"></iframe>');
+          }
+          videoContainer.data("loaded", true);
+        }
+      }
+    }
+    
     $(this).parent().parent().find(".award.hidden.open").toggleClass("open");
     $(this).parent().parent().find(".bibtex.hidden.open").toggleClass("open");
   });

@@ -1,5 +1,5 @@
 <div class="col">
-  <div class="card h-100 hoverable">
+  <div class="card h-100 hoverable" {% if project.video and site.enable_video_embedding %}style="cursor: default;"{% endif %}>
     {% if project.img %}
       {% if project.redirect %}
         <a href="{{ project.redirect }}">
@@ -61,19 +61,21 @@
         {% endif %}
         {% if project.video and site.enable_video_embedding %}
           <div class="ml-2">
-            <a class="abstract btn btn-sm z-depth-0" role="button" style="margin-top: 0.5rem;">Video</a>
+            <a class="abstract btn btn-sm z-depth-0" role="button" style="margin-top: 0.5rem;" onclick="event.preventDefault(); event.stopPropagation(); return false;">Video</a>
           </div>
         {% elsif project.video %}
           <div class="ml-2">
-            <a href="{{ project.video }}" class="btn btn-sm z-depth-0" role="button" style="margin-top: 0.5rem;" target="_blank">Video</a>
+            <a href="{{ project.video }}" class="btn btn-sm z-depth-0" role="button" style="margin-top: 0.5rem;" target="_blank" onclick="event.stopPropagation();">Video</a>
           </div>
         {% endif %}
       </div>
     </div>
     {% if project.video and site.enable_video_embedding %}
       <!-- Hidden video block -->
-      <div class="abstract hidden" style="padding: 1rem; text-align: center;">
-        {% include video.liquid path=project.video class="img-fluid rounded z-depth-1" controls=true preload="none" poster=project.img %}
+      <div class="abstract hidden" style="padding: 1rem; text-align: center; display: none;">
+        <div class="video-container" data-video-src="{{ project.video }}" data-poster="{{ project.img }}">
+          <!-- Video will be loaded when this block is opened -->
+        </div>
       </div>
     {% endif %}
   </div>
