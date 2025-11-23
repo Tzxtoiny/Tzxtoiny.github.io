@@ -92,13 +92,17 @@
             {% if p.nav and p.autogen == null %}
               {% comment %} Skip pages that don't match current language {% endcomment %}
               {% assign is_chinese_page = false %}
-              {% if p.language == 'zh' or p.permalink contains '/zh/' %}
+              {% if p.language == 'zh' %}
+                {% assign is_chinese_page = true %}
+              {% elsif p.permalink and p.permalink contains '/zh/' %}
                 {% assign is_chinese_page = true %}
               {% endif %}
               
               {% comment %} Skip if language doesn't match, but allow pages without language field (like CV) {% endcomment %}
               {% assign has_language = false %}
-              {% if p.language or p.permalink contains '/zh/' or p.permalink == '/zh/' %}
+              {% if p.language %}
+                {% assign has_language = true %}
+              {% elsif p.permalink and p.permalink contains '/zh/' %}
                 {% assign has_language = true %}
               {% endif %}
               
@@ -107,11 +111,13 @@
               {% endif %}
               
               {% comment %} Skip if we've already processed this nav_order {% endcomment %}
-              {% assign order_str = p.nav_order | append: ',' %}
-              {% if processed_orders contains order_str %}
-                {% continue %}
+              {% if p.nav_order %}
+                {% assign order_str = p.nav_order | append: ',' %}
+                {% if processed_orders contains order_str %}
+                  {% continue %}
+                {% endif %}
+                {% assign processed_orders = processed_orders | append: order_str %}
               {% endif %}
-              {% assign processed_orders = processed_orders | append: order_str %}
               
               {% assign nav_page = p %}
               {% assign nav_url = p.url %}
