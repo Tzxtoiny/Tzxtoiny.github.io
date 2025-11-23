@@ -16,6 +16,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
+        },{id: "nav-学术成果",
+          title: "学术成果",
+          description: "按类别倒序排列的出版物。由 jekyll-scholar 生成。",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/zh/publications/";
+          },
         },{id: "nav-cv",
           title: "Cv",
           description: "",
