@@ -44,7 +44,7 @@ latest_posts:
   - 论文题目：[面向负重助行的半人马人机系统设计与助力控制研究]
   - 导师：[付成龙教授](https://faculty.sustech.edu.cn/fucl/en/)
   - 南科大校训奖学金（2025）、南科大优秀研究生（2024）
-- **学士**，机械工程，[重庆大学](https://english.cqu.edu.cn/)（2017 - 2021）
+- **学士**，机械设计制造及其自动化（实验班），[重庆大学](https://english.cqu.edu.cn/)（2017 - 2021）
   - 国家奖学金（2020）
 
 <!-- TEACHING_ASSISTANT_START -->
