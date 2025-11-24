@@ -120,7 +120,6 @@
               {% endif %}
               
               {% assign nav_page = p %}
-              {% assign nav_url = p.url %}
               
               {% if nav_page.dropdown %}
                 {% assign has_active_child = false %}
@@ -161,17 +160,17 @@
                 </li>
               {% else %}
                 {% assign parent_link = nav_page.permalink | remove: 'index.html' %}
-                <li class="nav-item {% if page.url contains parent_link or page.url contains nav_page.url %}active{% endif %}">
+                <li class="nav-item {% if page.url contains parent_link or page.permalink == nav_page.permalink %}active{% endif %}">
                   {%- if nav_page.permalink contains '://' -%}
                     {%- assign url = nav_page.permalink -%}
                   {%- elsif nav_page.permalink contains '/blog/' -%}
                     {%- assign url = '/blog/' -%}
                   {%- else -%}
-                    {%- assign url = nav_url -%}
+                    {%- assign url = nav_page.permalink -%}
                   {%- endif %}
                   <a class="nav-link" href="{{ url | relative_url }}">
                     {{- nav_page.title }}
-                    {% if page.url contains nav_page.url or page.permalink == nav_page.permalink %}
+                    {% if page.permalink == nav_page.permalink %}
                       <span class="sr-only">(current)</span>
                     {% endif %}
                   </a>
