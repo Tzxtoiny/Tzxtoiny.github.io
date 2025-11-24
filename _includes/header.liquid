@@ -110,9 +110,9 @@
                 {% continue %}
               {% endif %}
               
-              {% comment %} Skip if we've already processed this nav_order {% endcomment %}
+              {% comment %} Skip if we've already processed this nav_order for the same language {% endcomment %}
               {% if p.nav_order %}
-                {% assign order_str = p.nav_order | append: ',' %}
+                {% assign order_str = p.nav_order | append: ',' | append: is_chinese_page | append: ',' %}
                 {% if processed_orders contains order_str %}
                   {% continue %}
                 {% endif %}
