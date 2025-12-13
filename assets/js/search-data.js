@@ -144,7 +144,7 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/%7B%22url%22=%3E%22/assets/pdf/CV_ZHIXIN_TU.pdf%22,%20%22logo%22=%3E%22/assets/img/cv.png%22%7D", "_blank");
+          window.open("/%7B%22url%22=%3E%22/assets/pdf/CV_ZHIXIN%20TU.pdf%22,%20%22logo%22=%3E%22/assets/img/cv.png%22%7D", "_blank");
         },
       },{
       id: 'light-theme',
