@@ -98,6 +98,16 @@ table {
   }
 }
 
+// News table text color (fix low contrast in dark mode)
+.news {
+  table {
+    td,
+    th {
+      color: var(--global-text-color);
+    }
+  }
+}
+
 a,
 table.table a {
   color: var(--global-theme-color);
