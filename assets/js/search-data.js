@@ -42,19 +42,8 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
-          description: "",
-          section: "News",},{id: "news-our-study-on-the-human-centaur-system-for-load-carriage-assistance-has-been-accepted-for-publication-in-the-international-journal-of-robotics-research-ijrr",
-          title: 'Our study on the Human–Centaur System for Load-Carriage Assistance has been accepted for...',
-          description: "",
-          section: "News",},{id: "news-最新发表的-ijrr-论文-design-modeling-control-and-evaluation-of-a-wearable-centaur-robot-for-load-carriage-walking-assistance-被南方科技大学新闻网报道-阅读更多",
-          title: '最新发表的 IJRR 论文 “Design, Modeling, Control, and Evaluation of a Wearable Centaur Robot...',
+            },},{id: "news-有关于半人马负重辅助机器人的相关成果-design-modeling-control-and-evaluation-of-a-wearable-centaur-robot-for-load-carriage-walking-assistance-被南方科技大学新闻网报道-阅读更多",
+          title: '有关于半人马负重辅助机器人的相关成果 “Design, Modeling, Control, and Evaluation of a Wearable Centaur Robot for Load-carriage...',
           description: "",
           section: "News",},{id: "news-our-ijrr-paper-design-modeling-control-and-evaluation-of-a-wearable-centaur-robot-for-load-carriage-walking-assistance-was-covered-by-sustech-news-read-more",
           title: 'Our IJRR paper “Design, Modeling, Control, and Evaluation of a Wearable Centaur Robot...',
