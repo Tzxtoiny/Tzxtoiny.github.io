@@ -43,7 +43,7 @@ ninja.data = [{
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
             },},{id: "news-有关于半人马负重辅助机器人的相关成果-design-modeling-control-and-evaluation-of-a-wearable-centaur-robot-for-load-carriage-walking-assistance-被南方科技大学新闻网报道-阅读更多",
-          title: '有关于半人马负重辅助机器人的相关成果 “Design, Modeling, Control, and Evaluation of a Wearable Centaur Robot for Load-carriage...',
+          title: '有关于半人马负重辅助机器人的相关成果“Design, Modeling, Control, and Evaluation of a Wearable Centaur Robot for Load-carriage Walking...',
           description: "",
           section: "News",},{id: "news-our-ijrr-paper-design-modeling-control-and-evaluation-of-a-wearable-centaur-robot-for-load-carriage-walking-assistance-was-covered-by-sustech-news-read-more",
           title: 'Our IJRR paper “Design, Modeling, Control, and Evaluation of a Wearable Centaur Robot...',
