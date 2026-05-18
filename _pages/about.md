@@ -48,7 +48,7 @@ I am open to postdoctoral positions and research roles at universities or resear
 ## Education
 
 - **Ph.D.** in intelligent robotics, [Southern University of Science and Technology](https://www.sustech.edu.cn/en/) (Expected 2026)
-  - Thesis/Dissertation: [Design and Assistance Control of Huamn-Centaur System For Load-Carriage Walking]
+  - Thesis/Dissertation: [Research on Assistance Mechanism and Collaborative Control of Human-Centaur System for Load-Carriage Walking]
   - Advisor: [Prof. Chenglong Fu](https://faculty.sustech.edu.cn/fucl/en/)
 - **B.S.** in mechanical engineering, [Chongqing University](https://english.cqu.edu.cn/) (2017 - 2021)
   - Chinese National Scholarship (2020)
